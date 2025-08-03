@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulador de Garra 3GDL</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Controle de Posição da Garra</h1>
+  <div id="main-container">
+    <div id="controls">
+      <div class="slider-container">
+        <label for="x">Coordenada X</label>
+        <input type="range" id="x" min="-21" max="21" value="10" step="0.1" />
+        <input type="number" id="xInput" min="-21" max="21" value="10" step="0.1" />
+        <div class="output" id="xVal"></div>
+      </div>
+
+      <div class="slider-container">
+        <label for="y">Coordenada Y</label>
+        <input type="range" id="y" min="-21" max="21" value="0" step="0.1" />
+        <input type="number" id="yInput" min="-21" max="21" value="0" step="0.1" />
+        <div class="output" id="yVal"></div>
+      </div>
+
+      <div class="slider-container">
+        <label for="z">Coordenada Z</label>
+        <input type="range" id="z" min="-21" max="21" value="10" step="0.1" />
+        <input type="number" id="zInput" min="-21" max="21" value="10" step="0.1" />
+        <div class="output" id="zVal"></div>
+      </div>
+
+      <form id="coordForm" class="coordenadas-submit">
+        <label>X: <input type="number" id="xSubmitInput" step="0.01" class="coord-input"></label>
+        <label>Y: <input type="number" id="ySubmitInput" step="0.01" class="coord-input"></label>
+        <label>Z: <input type="number" id="zSubmitInput" step="0.01" class="coord-input"></label>
+        <button id="submitButton">Enviar</button>
+        <div id="mensagemErro" style="color: red; display: none; margin-top: 10px;"></div>
+      </form>
+
+      <div style="margin-top: 20px;">
+        <label>
+          <input type="checkbox" id="modoManualCheckbox" checked/>
+          <strong>Modo Manual</strong>
+        </label>
+      </div>
+
+      <button id="conectarSerialBtn">🔌 Conectar com Arduino</button>
+      <button id="desconectarSerialBtn">❌ Desconectar do Arduino</button>
+      <div id="statusSerial" style="margin-top: 10px; font-weight: bold;"></div>
+
+    </div>
+
+    <div id="plot3d">
+
+      <div id="results-container">
+        <h2>Resultados</h2>
+        <p id="results"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
