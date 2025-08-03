@@ -15,7 +15,7 @@ O sistema de controle possui dois modos:
 ## Como acessar a interface?
 A interface pode ser acessada através do link a seguir:
 <br>
-<a>Sistema Controle Braço Robótico</a>
+<a href="https://exquisite-pothos-2af40f.netlify.app/">Sistema Controle Braço Robótico</a>
 
 Ou pode ser acessada de maneira local, baixando os arquivo presentes neste git e executando o arquivo "index.html" em algum navegador.
 
